@@ -1,4 +1,10 @@
-def hello_world():
-     print("Hello world");
+def return_correct_text(text: str) -> str | bool:
+    pass
 
-hello_world();
+
+def remove_digits(text: str) -> str:
+    pass
+
+
+def remove_vowels(text: str) -> str:
+    pass
