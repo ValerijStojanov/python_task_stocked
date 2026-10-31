@@ -20,7 +20,30 @@ def remove_digits(text: str) -> str:
 
 
 def remove_vowels(text: str) -> str:
-    return "Text začíná !"
+    vowels: set[str] = {
+        "a",
+        "á",
+        "e",
+        "é",
+        "ě",
+        "i",
+        "í",
+        "o",
+        "ó",
+        "u",
+        "ú",
+        "ů",
+        "y",
+        "ý",
+    }
+
+    result_text: str = ""
+
+    for chars in text:
+        if chars.lower() not in vowels:
+            result_text += chars
+
+    return result_text
 
 
 print(return_correct_text(input("Váš text prosím:")))
