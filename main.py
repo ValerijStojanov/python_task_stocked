@@ -1,12 +1,19 @@
 def return_correct_text(text: str) -> str | bool:
     result: str = ""
 
-    if text.startswith("!"):
-        result = remove_vowels(text)
-    else:
-        result = remove_digits(text)
+    text_without_digits: str = remove_digits(text)
 
-    return result
+    if text.startswith("!"):
+        result = remove_vowels(text_without_digits)
+    else:
+        result = text_without_digits
+
+    text_length = len(result)
+
+    if text_length > 140:
+        return False
+    else:
+        return result
 
 
 def remove_digits(text: str) -> str:
@@ -46,4 +53,4 @@ def remove_vowels(text: str) -> str:
     return result_text
 
 
-print(return_correct_text(input("Váš text prosím:")))
+print(return_correct_text(input("Váš text prosím: ")))
