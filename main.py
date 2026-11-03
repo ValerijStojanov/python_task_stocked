@@ -4,7 +4,8 @@ def return_correct_text(text: str) -> str | bool:
     text_without_digits: str = remove_digits(text)
 
     if text.startswith("!"):
-        result = remove_vowels(text_without_digits)
+        text_without_exclamation_mark = text_without_digits[1:]
+        result = remove_vowels(text_without_exclamation_mark)
     else:
         result = text_without_digits
 
