@@ -54,4 +54,5 @@ def remove_vowels(text: str) -> str:
     return result_text
 
 
-print(return_correct_text(input("Váš text prosím: ")))
+if __name__ == "__main__":
+    print(return_correct_text(input("Váš text prosím: ")))
